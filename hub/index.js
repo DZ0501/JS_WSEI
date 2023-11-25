@@ -1,6 +1,6 @@
 const slider = document.getElementById("slider");
 const slideLink = document.getElementById("slideLink");
-const numSlides = 3; // Adjust this based on the number of slides
+const numSlides = 4; // Adjust this based on the number of slides
 let currentSlide = 0;
 let autoSlideInterval;
 
