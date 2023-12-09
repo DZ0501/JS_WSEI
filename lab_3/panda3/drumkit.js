@@ -16,11 +16,11 @@ function onKeyPress(event) {
     const sound = KeyToSound[event.key];
     if (sound) {
         playSound(sound);
-        recordSound(sound, activeChannel); // Use the active channel
+        recordSound(sound, activeChannel);
     }
 }
 
-let activeChannel = 'channel1'; // Initialize the active channel
+let activeChannel = 'channel1'; 
 
 function setActiveChannel(channel) {
     activeChannel = channel;
@@ -48,7 +48,7 @@ function stopRecording(channel) {
 
 function playChannel(channel) {
     const sounds = recordingChannels[channel];
-    const delay = 300; // Adjust this value to control the delay between sounds (in milliseconds)
+    const delay = 300;
     let currentTime = 0;
 
     sounds.forEach((sound) => {
@@ -66,12 +66,10 @@ function playAllChannels() {
     }
 }
 
-// Save recording data to localStorage
 window.addEventListener('beforeunload', () => {
     localStorage.setItem('recordedData', JSON.stringify(recordingChannels));
 });
 
-// Load recording data from localStorage
 if (localStorage.getItem('recordedData')) {
     const savedData = JSON.parse(localStorage.getItem('recordedData'));
     Object.assign(recordingChannels, savedData);

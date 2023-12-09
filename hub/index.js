@@ -1,6 +1,6 @@
 const slider = document.getElementById("slider");
 const slideLink = document.getElementById("slideLink");
-const numSlides = 4; // Adjust this based on the number of slides
+const numSlides = 5;
 let currentSlide = 0;
 let autoSlideInterval;
 
@@ -63,12 +63,11 @@ function toggleAutoSlide() {
 }
 
 function updateSlideLink() {
-    // Update the link based on the current slide
     slideLink.href = `/lab_${currentSlide + 1}`;
     slideLink.innerText = `lab_${currentSlide + 1}`;
 }
 
 createDots();
-updateActiveDot(currentSlide); // Set the initial active dot
+updateActiveDot(currentSlide);
 toggleAutoSlide();
 

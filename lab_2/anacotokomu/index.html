@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
+
 <body>
   <div id="slider-container">
     <div id="slider">
@@ -17,8 +19,8 @@
     <span class="slider-button" onclick="goToSlide(0)">O</span>
     <span class="slider-button" onclick="goToSlide(1)">O</span>
     <span class="slider-button" onclick="goToSlide(2)">O</span>
-  </div> 
-  
+  </div>
+
   <div id="navigation">
     <span class="slider-button2" onclick="prevSlide()">◄◄</span>
     <span class="slider-button2" onclick="nextSlide()">►►</span>
@@ -51,7 +53,7 @@
 
     const dots = document.getElementById("dots-container").children;
     for (let i = 0; i < dots.length; i++) {
-      dots[i].addEventListener("click", function() {
+      dots[i].addEventListener("click", function () {
         goToSlide(i);
       });
     }
@@ -63,4 +65,5 @@
     setInterval(autoSlide, 2500); 
   </script>
 </body>
+
 </html>

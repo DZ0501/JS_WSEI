@@ -32,7 +32,7 @@ function createDots() {
     const dot = document.createElement("span");
     dot.classList.add("slider-dot");
     dot.setAttribute("data-index", i);
-    dot.addEventListener("click", function() {
+    dot.addEventListener("click", function () {
       const index = parseInt(this.getAttribute("data-index"));
       goToSlide(index);
     });
@@ -64,5 +64,5 @@ function toggleAutoSlide() {
   }
 }
 
-createDots(); // Utwórz dynamiczne punkty
-toggleAutoSlide(); // Rozpocznij automatyczne przewijanie domyślnie
+createDots();
+toggleAutoSlide(); 
