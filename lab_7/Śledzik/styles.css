@@ -1,0 +1,30 @@
+#weatherApp {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+#cityList {
+    margin-bottom: 20px;
+}
+#weatherInfo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.city {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+.city h2 {
+    margin-top: 0;
+}
+.city img {
+    width: 50px;
+    height: 50px;
+}
+.error {
+    color: red;
+}
