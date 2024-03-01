@@ -1,0 +1,18 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 50vw;
+    height: 70vh;
+    border: groove 1vh darkgray;
+    background-color: #fafafa;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}

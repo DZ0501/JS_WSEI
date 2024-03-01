@@ -1,69 +1,38 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <link rel="stylesheet" type="text/css" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lab2-anacotokomu</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div id="slider-container">
-    <div id="slider">
-      <div><img src="1.jpg" alt="Slide 1"></div>
-      <div><img src="2.jpg" alt="Slide 2"></div>
-      <div><img src="3.jpg" alt="Slide 3"></div>
+  <div class="container">
+    <div class="upper-part">
+      <div id="slider">
+        <img src="1.png" alt="1">
+        <img src="2.png" alt="2">
+        <img src="3.png" alt="3">
+      </div>
     </div>
+    <div class="lower-part">
+      <div id="dots">
+        <span class="dots-button">O</span>
+        <span class="dots-button">O</span>
+        <span class="dots-button">O</span>
+      </div>
+      <div id="navigation">
+        <span class="slider-button" id="prevButton">◄◄</span>
+        <span class="slider-button" id="pauseButton">▶❚❚</span>
+        <span class="slider-button" id="nextButton">►►</span>
+    </div>
+    </div>
+
   </div>
 
-  <div id="dots-container">
-    <span class="slider-button" onclick="goToSlide(0)">O</span>
-    <span class="slider-button" onclick="goToSlide(1)">O</span>
-    <span class="slider-button" onclick="goToSlide(2)">O</span>
-  </div>
 
-  <div id="navigation">
-    <span class="slider-button2" onclick="prevSlide()">◄◄</span>
-    <span class="slider-button2" onclick="nextSlide()">►►</span>
-  </div>
-
-  <script>
-    const slider = document.getElementById("slider");
-    const slides = slider.children;
-    const numSlides = slides.length;
-    let currentSlide = 0;
-
-    function updateSlider() {
-      slider.style.transform = `translateX(-${currentSlide * 300}px)`;
-    }
-
-    function nextSlide() {
-      currentSlide = (currentSlide + 1) % numSlides;
-      updateSlider();
-    }
-
-    function prevSlide() {
-      currentSlide = (currentSlide - 1 + numSlides) % numSlides;
-      updateSlider();
-    }
-
-    function goToSlide(slideIndex) {
-      currentSlide = slideIndex;
-      updateSlider();
-    }
-
-    const dots = document.getElementById("dots-container").children;
-    for (let i = 0; i < dots.length; i++) {
-      dots[i].addEventListener("click", function () {
-        goToSlide(i);
-      });
-    }
-
-    function autoSlide() {
-      nextSlide();
-    }
-
-    setInterval(autoSlide, 2500); 
-  </script>
+  <script src="script.js" type="text/javascript"></script>
 </body>
 
 </html>

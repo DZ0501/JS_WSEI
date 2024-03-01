@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Drum Machine</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab3-panda3</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <audio id="s1" src="../sounds/clap.wav"></audio>
@@ -9,24 +12,26 @@
     <audio id="s3" src="../sounds/ride.wav"></audio>
     <audio id="s4" src="../sounds/tink.wav"></audio>
 
-    <button onclick="startRecording('channel1')">Start Recording Channel 1</button>
-    <button onclick="stopRecording('channel1')">Stop Recording Channel 1</button>
-    <button onclick="playChannel('channel1')">Play Channel 1</button>
-    <br>
-    <button onclick="startRecording('channel2')">Start Recording Channel 2</button>
-    <button onclick="stopRecording('channel2')">Stop Recording Channel 2</button>
-    <button onclick="playChannel('channel2')">Play Channel 2</button>
-    <br>
-    <button onclick="startRecording('channel3')">Start Recording Channel 3</button>
-    <button onclick="stopRecording('channel3')">Stop Recording Channel 3</button>
-    <button onclick="playChannel('channel3')">Play Channel 3</button>
-    <br>
-    <button onclick="startRecording('channel4')">Start Recording Channel 4</button>
-    <button onclick="stopRecording('channel4')">Stop Recording Channel 4</button>
-    <button onclick="playChannel('channel4')">Play Channel 4</button>
-    <br>
-    <button onclick="playAllChannels()">Play All Channels</button>
+    <div class="container">
+        <button id="startRecording-channel1">Start Recording Channel 1</button>
+        <button id="stopRecording-channel1">Stop Recording Channel 1</button>
+        <button id="playChannel-channel1">Play Channel 1</button>
+        <br>
+        <button id="startRecording-channel2">Start Recording Channel 2</button>
+        <button id="stopRecording-channel2">Stop Recording Channel 2</button>
+        <button id="playChannel-channel2">Play Channel 2</button>
+        <br>
+        <button id="startRecording-channel3">Start Recording Channel 3</button>
+        <button id="stopRecording-channel3">Stop Recording Channel 3</button>
+        <button id="playChannel-channel3">Play Channel 3</button>
+        <br>
+        <button id="startRecording-channel4">Start Recording Channel 4</button>
+        <button id="stopRecording-channel4">Stop Recording Channel 4</button>
+        <button id="playChannel-channel4">Play Channel 4</button>
+        <br>
+        <button id="play-all-channels">Play All Channels</button>
+    </div>
 
-    <script src="drumkit.js"></script>
+    <script src="script.js" type="text/javascript"></script>
 </body>
 </html>
